@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Retired But Not Forgotten</title>
+<meta name="description" content="Four NASA machines finished their missions but still rest on the Moon and Mars. Explore their stories in a galaxy of memories.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+<header class="nav"><a class="brand" href="#top">RETIRED BUT NOT FORGOTTEN</a><button id="menu" aria-expanded="false" aria-controls="nv">Menu</button>
+<nav id="nv" aria-label="Main"><a href="#top">Home</a><a href="#galaxy-s">Memory Galaxy</a><a href="#journey">Life Journey</a><a href="#legends">Our Legends</a><a href="#wisdom">Wisdom</a><a href="#gens">Generations</a><a href="#quiz">Quiz</a><a href="#share">Share a Memory</a></nav></header>
+<main id="top">
+<section class="hero">
+ <div><h1><span>Retired</span><span>But not</span><span>Forgotten.</span></h1>
+ <p class="tag">Every mission has a story. Every story deserves to live forever.</p>
+ <p>NASA machines finished their jobs on the Moon and Mars, but they are still up there, and what they taught us never retired.</p>
+ <div class="btns"><a class="btn" href="#galaxy-s">Explore stories</a><a class="btn alt" href="#share">Discover memories</a></div></div>
+ <div class="robotbox"><div id="planet" aria-hidden="true"></div>
+ <p id="bubble" role="status">Hi! I’m Orbi. Click a glowing star!</p>
+ <svg id="robot" viewBox="0 0 200 240" role="img" aria-label="Orbi, the friendly orange robot guide" tabindex="0">
+  <line x1="100" y1="14" x2="100" y2="34" stroke="#fff" stroke-width="4"/><circle cx="100" cy="12" r="8" fill="#FFD166"/>
+  <g id="head"><rect x="40" y="34" width="120" height="90" rx="30" fill="#fff"/><rect x="52" y="48" width="96" height="60" rx="22" fill="#101116"/>
+  <g id="eyes"><circle id="eL" cx="80" cy="78" r="12" fill="#00A6FF"/><circle id="eR" cx="120" cy="78" r="12" fill="#00A6FF"/>
+  <rect class="lid" x="66" y="64" width="68" height="28" fill="#101116" style="transform-origin:100px 78px"/></g>
+  <path d="M86 100q14 8 28 0" stroke="#FF7900" stroke-width="4" fill="none" stroke-linecap="round"/></g>
+  <rect x="55" y="130" width="90" height="80" rx="26" fill="#FF7900"/><circle cx="100" cy="168" r="16" fill="#101116"/><circle cx="100" cy="168" r="7" fill="#FFD166"/>
+  <rect x="80" y="205" width="14" height="24" rx="6" fill="#fff"/><rect x="106" y="205" width="14" height="24" rx="6" fill="#fff"/>
+  <rect x="160" y="140" width="14" height="50" rx="7" fill="#fff" transform="rotate(-12 167 140)"/>
+  <g class="arm"><rect x="26" y="112" width="14" height="52" rx="7" fill="#fff" transform="rotate(18 33 112)"/></g></svg></div>
+ <div class="scroll" aria-hidden="true"></div>
+</section>
+
+<section id="galaxy-s" class="wrap">
+ <h2 class="rv z">The Memory Galaxy</h2>
+ <p class="lead rv">Every glowing star is a machine that finished its mission. Click one to open its story. Some stars are hiding secrets.</p>
+ <div id="galaxy" class="rv z" role="group" aria-label="Galaxy of retired machines"></div>
+ <p class="hint">Found <b id="fcount">0</b> of 4 stories. Use Tab and Enter to explore with a keyboard.</p>
+</section>
+
+<section id="journey" class="wrap">
+ <h2 class="rv l">Life Journey: Mars Pathfinder</h2>
+ <p class="lead rv">Follow one machine from launch day to its last signal. Scroll, or click a milestone.</p>
+ <div class="tl"><div id="tlp"></div><div id="tlist"></div></div>
+</section>
+
+<section id="legends" class="wrap">
+ <h2 class="rv r">Meet Our Legends</h2>
+ <p class="lead rv">Pick a world, then open a card to read the story.</p>
+ <div class="tabs" role="group" aria-label="Choose a world"><button class="tab active" data-f="all" aria-pressed="true">All four</button><button class="tab" data-f="Moon" aria-pressed="false">The Moon</button><button class="tab" data-f="Mars" aria-pressed="false">Mars</button></div>
+ <div id="cards" class="cards"></div>
+</section>
+
+<section id="wisdom" class="wrap">
+ <h2 class="rv">A Lifetime of Wisdom</h2>
+ <p class="lead rv">Lessons these machines left behind. Click a card to read more.</p>
+ <div id="wis" class="wis"></div>
+</section>
+
+<section id="gens" class="wrap">
+ <h2 class="rv l">Generations Connect</h2>
+ <p class="lead rv">Knowledge passes from one machine to the next, just like it passes from people to children.</p>
+ <div class="gen rv">
+  <div class="gn"><span class="chip">1969–1972</span><b>Apollo</b><p>Showed that people can land on another world and come home with Moon rocks.</p></div>
+  <div class="gn"><span class="chip">1996–1997</span><b>Pathfinder & Sojourner</b><p>Proved small, low-cost missions and a small rover can work on Mars.</p></div>
+  <div class="gn"><span class="chip">Later</span><b>Spirit, Opportunity, Curiosity, Perseverance</b><p>Bigger Mars rovers built on what Pathfinder learned.</p></div>
+  <div class="gn"><span class="chip">Today</span><b>You!</b><p>Every young explorer who reads these stories carries them forward.</p></div>
+ </div>
+</section>
+
+<section id="quiz" class="wrap">
+ <h2 class="rv">Space Explorer Quiz</h2><p class="lead">8 questions about the four machines. Ready?</p>
+ <div id="quizbox" class="box"></div>
+ <h2 style="margin-top:3.5rem">Fun space facts</h2><div id="factlist" class="facts"></div>
+</section>
+
+<section id="share" class="wrap">
+ <h2 class="rv">Share a Memory</h2>
+ <p class="lead rv">Tell us a story or lesson about a space machine or someone who worked on one. This is a working prototype: entries stay in your browser only and are not published.</p>
+ <form id="form" class="box" novalidate>
+  <label for="nm">Your first name (optional)</label><input id="nm" maxlength="40" autocomplete="off">
+  <label for="cat">Category</label><select id="cat"><option value="">Choose…</option><option>Moon machine</option><option>Mars machine</option><option>Person who worked on missions</option><option>Something I learned</option></select><div class="err" id="e1"></div>
+  <label for="st">Your story or lesson (at least 20 characters)</label><textarea id="st" rows="4" maxlength="600"></textarea><div class="err" id="e2"></div>
+  <label class="chk"><input type="checkbox" id="ok"> I agree my story may be saved for review. If it names a real person or includes a photo, I have their permission. I understand nothing is shown publicly without approval.</label><div class="err" id="e3"></div>
+  <button class="btn" type="submit">Save my memory</button><p class="fb" id="fmsg" aria-live="polite"></p><div id="mems"></div>
+ </form>
+</section>
+</main>
+<footer id="end"><svg width="70" viewBox="0 0 200 240" aria-hidden="true" style="animation:fl 5s ease-in-out infinite"><rect x="40" y="34" width="120" height="90" rx="30" fill="#fff"/><rect x="52" y="48" width="96" height="60" rx="22" fill="#101116"/><circle cx="80" cy="78" r="12" fill="#00A6FF"/><circle cx="120" cy="78" r="12" fill="#00A6FF"/><rect x="55" y="130" width="90" height="80" rx="26" fill="#FF7900"/></svg>
+<h2>Machines may retire, but their impact never retires.</h2>
+<nav aria-label="Footer"><a href="#top">Home</a><a href="#galaxy-s">Memory Galaxy</a><a href="#quiz">Quiz</a><a href="#share">Share a memory</a></nav>
+<small>Made for the NASA Space Apps Challenge. Facts and photos come from NASA mission information. NASA-inspired colors are a style reference only; this project is not affiliated with or endorsed by NASA.</small></footer>
+
+<div id="modal" class="modal" hidden><div class="sheet" role="dialog" aria-modal="true" aria-labelledby="mtitle"><button class="close" id="mclose" aria-label="Close story">&times;</button><div id="mbody"></div></div></div>
+<canvas id="conf" aria-hidden="true"></canvas>
+
+<script src="script.js"></script></body></html>
